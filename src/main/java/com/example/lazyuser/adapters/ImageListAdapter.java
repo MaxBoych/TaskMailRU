@@ -1,7 +1,6 @@
 package com.example.lazyuser.adapters;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,8 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.lazyuser.R;
-import com.example.lazyuser.config.AppConfig;
-import com.example.lazyuser.interfaces.OnListItemClickListener;
+import com.example.lazyuser.interfaces.ListItemClickListener;
 import com.example.lazyuser.models.ImageItem;
 import com.example.lazyuser.models.RelatedImageItem;
 
@@ -24,7 +22,7 @@ import java.util.List;
 
 public class ImageListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private OnListItemClickListener mOnListItemClickListener;
+    private ListItemClickListener mListItemClickListener;
 
     private List<ImageItem> mList;
     private RecyclerView.RecycledViewPool mViewPool;
@@ -38,8 +36,8 @@ public class ImageListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         mContext = context;
     }
 
-    public void setOnListItemClickListener(OnListItemClickListener listener) {
-        mOnListItemClickListener = listener;
+    public void setOnListItemClickListener(ListItemClickListener listener) {
+        mListItemClickListener = listener;
     }
 
     public void updateList(List<ImageItem> list) {
@@ -71,11 +69,26 @@ public class ImageListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         }
 
         List<RelatedImageItem> related = item.getRelatedImageList();
-        if (related != null) {
-            Log.d(AppConfig.APPLICATION_TAG, related.size() + "");
-            Log.d(AppConfig.APPLICATION_TAG, related.get(0).getSource());
+        if (related != null && !related.isEmpty()) {
+
+            if (itemHolder.list.getVisibility() == View.GONE) {
+                itemHolder.list.setVisibility(View.VISIBLE);
+                if (itemHolder.list.getAdapter() != null) {
+                    return;
+                }
+            } else {
+                itemHolder.list.setVisibility(View.GONE);
+                return;
+            }
+
+            //Log.d(AppConfig.APPLICATION_TAG, related.size() + "");
+            /*for (RelatedImageItem imageItem : related) {
+                Log.d(AppConfig.APPLICATION_TAG, imageItem.getSource());
+            }*/
+            //Log.d(AppConfig.APPLICATION_TAG, related.size() + "");
+            //Log.d(AppConfig.APPLICATION_TAG, related.get(0).getSource());
             LinearLayoutManager layoutManager = new LinearLayoutManager(
-                    /*mContext*/  itemHolder.list.getContext(),
+                    itemHolder.list.getContext(),
                     LinearLayoutManager.HORIZONTAL,
                     false
             );
@@ -112,10 +125,10 @@ public class ImageListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
             list = itemView.findViewById(R.id.related_image_list);
 
             itemView.setOnClickListener(v -> {
-                if (mOnListItemClickListener != null) {
+                if (mListItemClickListener != null) {
                     int position = getAdapterPosition();
                     if (position != RecyclerView.NO_POSITION) {
-                        mOnListItemClickListener.onItemClicked(position);
+                        mListItemClickListener.onItemClicked(position);
                     }
                 }
             });

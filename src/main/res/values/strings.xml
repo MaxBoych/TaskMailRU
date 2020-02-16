@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">LazyUser</string>
     <string name="action_settings">Settings</string>
+
+    <!-- Network -->
+    <string name="network_lost_message">Lost Internet connection :(</string>
+    <string name="ok">OK</string>
+
+    <string name="search_field">Search images</string>
+    <string name="search_button">Search</string>
 </resources>

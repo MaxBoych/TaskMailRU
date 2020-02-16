@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -20,7 +21,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.lazyuser.R;
 import com.example.lazyuser.adapters.ImageListAdapter;
 import com.example.lazyuser.config.AppConfig;
-import com.example.lazyuser.interfaces.OnMainStateChangeListener;
+import com.example.lazyuser.interfaces.MainStateChangeListener;
 import com.example.lazyuser.models.ImageItem;
 import com.example.lazyuser.models.RelatedImageItem;
 import com.example.lazyuser.viewmodels.ImageListViewModel;
@@ -38,12 +39,12 @@ public class ImageListFragment extends Fragment implements View.OnClickListener 
     private FloatingActionButton mNewSearch;
     private int mClickedPosition;
 
-    private OnMainStateChangeListener mOnMainStateChangeListener;
+    private MainStateChangeListener mMainStateChangeListener;
 
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
-        mOnMainStateChangeListener = (OnMainStateChangeListener) context;
+        mMainStateChangeListener = (MainStateChangeListener) context;
     }
 
     @Override
@@ -65,13 +66,12 @@ public class ImageListFragment extends Fragment implements View.OnClickListener 
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.new_search_button) {
-            mOnMainStateChangeListener.onHtmlRequestScreen(this);
+            mMainStateChangeListener.onHtmlRequestScreen(this);
         }
     }
 
     private void initViewModel() {
         mViewModel = ViewModelProviders.of(this).get(ImageListViewModel.class);
-        mViewModel.setContext(getContext());
         initAdapter();
         observeLoadState();
     }
@@ -83,12 +83,15 @@ public class ImageListFragment extends Fragment implements View.OnClickListener 
         mAdapter.setOnListItemClickListener(position -> {
             mClickedPosition = position;
             ImageItem item = mViewModel.getImageItem(position);
-            mViewModel.downloadRelatedImages(item.getUrl());
-
-            //отправлять во вьюмодел индекс, и потом с помощью нотифай обновлять этот элемент со списком своих связанных картинок
-
-            //RelatedImageListAdapter adapter = new RelatedImageListAdapter(item.getRelatedImageList(), getContext());
-
+            List<RelatedImageItem> related = item.getRelatedImageList();
+            if (related != null && !related.isEmpty()) {
+                mViewModel.changeRelatedImagesVisibility();
+            } else if (related != null) {
+                showResponseForInvisible();
+            } else {
+                prohibitTouch();
+                mViewModel.downloadRelatedImages(item.getUrl());
+            }
         });
         mImageList.setAdapter(mAdapter);
     }
@@ -101,24 +104,29 @@ public class ImageListFragment extends Fragment implements View.OnClickListener 
                     if (related != null) {
                         ImageItem item = mViewModel.updateRelated(mClickedPosition);
                         mAdapter.notifyItemChanged(mClickedPosition, item);
+                        //allowTouch();
                     } else {
                         updateAdapter();
                     }
                     setLoadProgressBarVisibility(View.GONE);
-                    mNewSearch.setEnabled(true);
+                    //mNewSearch.setEnabled(true);
+                    allowTouch();
                     break;
                 case NONE:
                     setLoadProgressBarVisibility(View.GONE);
-                    mNewSearch.setEnabled(true);
+                    allowTouch();
+                    //mNewSearch.setEnabled(true);
                     break;
                 case FAIL:
                     setLoadProgressBarVisibility(View.GONE);
                     showError();
-                    mNewSearch.setEnabled(true);
+                    //mNewSearch.setEnabled(true);
+                    allowTouch();
                     break;
                 case PROGRESS:
                     setLoadProgressBarVisibility(View.VISIBLE);
-                    mNewSearch.setEnabled(false);
+                    prohibitTouch();
+                    //mNewSearch.setEnabled(false);
                     break;
             }
         });
@@ -135,6 +143,13 @@ public class ImageListFragment extends Fragment implements View.OnClickListener 
                 .show();
     }
 
+    private void showResponseForInvisible() {
+        Toast.makeText(getContext(),
+                AppConfig.RELATED_DOWNLOADED_INVISIBLE,
+                Toast.LENGTH_LONG)
+                .show();
+    }
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -145,7 +160,6 @@ public class ImageListFragment extends Fragment implements View.OnClickListener 
             Bundle bundle = data.getExtras();
             String html = "";
             if (bundle != null) {
-                //mWord = bundle.getString(AppConfig.WORD_KEY, "");
                 html = bundle.getString(AppConfig.HTML_KEY);
             }
             mViewModel.parseHtml(html);
@@ -154,5 +168,18 @@ public class ImageListFragment extends Fragment implements View.OnClickListener 
 
     private void setLoadProgressBarVisibility(int view) {
         mProgressBar.setVisibility(view);
+    }
+
+    private void allowTouch() {
+        if (getActivity() != null) {
+            getActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+        }
+    }
+
+    private void prohibitTouch() {
+        if (getActivity() != null) {
+            getActivity().getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
+                    WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+        }
     }
 }

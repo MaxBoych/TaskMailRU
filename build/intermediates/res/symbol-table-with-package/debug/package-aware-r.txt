@@ -1576,6 +1576,8 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id multiply
 id navigation_header_container
+id network_lost_message
+id network_lost_ok
 id never
 id new_search_button
 id noScroll
@@ -1775,7 +1777,8 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
-layout dialog_search_request
+layout dialog_html_request
+layout dialog_network_lost
 layout fragment_image_list
 layout image_item
 layout mtrl_alert_dialog
@@ -1909,11 +1912,15 @@ string mtrl_picker_toggle_to_calendar_input_mode
 string mtrl_picker_toggle_to_day_selection
 string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
+string network_lost_message
+string ok
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string search_button
+string search_field
 string search_menu_title
 string status_bar_notification_info_overflow
 style AlertDialog_AppCompat

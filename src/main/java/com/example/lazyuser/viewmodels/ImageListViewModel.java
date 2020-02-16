@@ -1,14 +1,11 @@
 package com.example.lazyuser.viewmodels;
 
-import android.content.Context;
-import android.util.Log;
-
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.example.lazyuser.config.AppConfig;
-import com.example.lazyuser.interfaces.OnDownloadDataListener;
+import com.example.lazyuser.interfaces.DownloadDataListener;
 import com.example.lazyuser.models.ImageItem;
 import com.example.lazyuser.models.RelatedImageItem;
 import com.example.lazyuser.repositories.ImageListRepository;
@@ -29,24 +26,21 @@ public class ImageListViewModel extends ViewModel {
     private MutableLiveData<AppConfig.LoadStageState> mLoadState;
     private MutableLiveData<String> mErrorMessage;
 
-    private Context mContext;
-
     public ImageListViewModel() {
         mImageList = new ArrayList<>();
-        //mRelatedImageList = new ArrayList<>();
         mLoadState = new MutableLiveData<>();
         mLoadState.setValue(AppConfig.LoadStageState.NONE);
         mErrorMessage = new MutableLiveData<>();
         mErrorMessage.setValue(AppConfig.DEFAULT_ERROR_VALUE);
     }
 
-    public void setContext(Context context) {
-        mContext = context;
+    public void changeRelatedImagesVisibility() {
+        mLoadState.setValue(AppConfig.LoadStageState.SUCCESS);
     }
 
     public void downloadRelatedImages(String url) {
         mLoadState.setValue(AppConfig.LoadStageState.PROGRESS);
-        new ImageListRepository().downloadRelatedImages(url, new OnDownloadDataListener<List<RelatedImageItem>>() {
+        new ImageListRepository().downloadRelatedImages(url, new DownloadDataListener<List<RelatedImageItem>>() {
             @Override
             public void onDownloadSuccessful(List<RelatedImageItem> data) {
                 updateRelatedList(data);
@@ -61,13 +55,13 @@ public class ImageListViewModel extends ViewModel {
 
     public void parseHtml(String html) {
         mLoadState.setValue(AppConfig.LoadStageState.PROGRESS);
+        mImageList = new ArrayList<>();
         Document document = Jsoup.parse(html);
         Elements images = document.getElementsByClass(AppConfig.IMAGE_CLASS_NAME);
         for (Element image : images) {
             String size = image.getElementsByClass(AppConfig.IMAGE_SIZE_CLASS_NAME).first().text();
             String url = image.getElementsByClass(AppConfig.IMAGE_URL_CLASS_NAME).first().attr(AppConfig.IMAGE_URL_ATTR_NAME);
             String source = image.getElementsByClass(AppConfig.IMAGE_SOURCE_CLASS_NAME).attr(AppConfig.IMAGE_SOURCE_ATTR_NAME);
-            Log.d(AppConfig.APPLICATION_TAG, source);
             mImageList.add(new ImageItem(source, url, size));
         }
         mLoadState.setValue(AppConfig.LoadStageState.SUCCESS);
@@ -81,10 +75,6 @@ public class ImageListViewModel extends ViewModel {
         mRelatedImageList = new ArrayList<>(list);
         mLoadState.setValue(AppConfig.LoadStageState.SUCCESS);
     }
-
-   /* public void resetRelated() {
-        mRelatedImageList = null;
-    }*/
 
     public ImageItem updateRelated(int position) {
         ImageItem item = mImageList.get(position);

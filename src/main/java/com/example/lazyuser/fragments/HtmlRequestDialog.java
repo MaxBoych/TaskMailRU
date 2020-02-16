@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -18,6 +19,8 @@ import com.example.lazyuser.R;
 import com.example.lazyuser.config.AppConfig;
 import com.example.lazyuser.viewmodels.HtmlRequestViewModel;
 
+import java.util.Objects;
+
 public class HtmlRequestDialog extends DialogFragment implements View.OnClickListener {
 
     private HtmlRequestViewModel mViewModel;
@@ -26,18 +29,10 @@ public class HtmlRequestDialog extends DialogFragment implements View.OnClickLis
     private EditText mSearchWord;
     private ProgressBar mProgressBar;
 
-   /* private OnMainStateChangeListener mOnMainStateChangeListener;
-
-    @Override
-    public void onAttach(@NonNull Context context) {
-        super.onAttach(context);
-        mOnMainStateChangeListener = (OnMainStateChangeListener) context;
-    }*/
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup viewGroup, Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.dialog_search_request, viewGroup, false);
+        View view = inflater.inflate(R.layout.dialog_html_request, viewGroup, false);
 
         mProgressBar = view.findViewById(R.id.progress_bar);
         mSearchWord = view.findViewById(R.id.search_word);
@@ -57,9 +52,16 @@ public class HtmlRequestDialog extends DialogFragment implements View.OnClickLis
         }
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        Objects.requireNonNull(Objects.requireNonNull(getDialog()).getWindow())
+                .setLayout(WindowManager.LayoutParams.MATCH_PARENT,
+                        WindowManager.LayoutParams.WRAP_CONTENT);
+    }
+
     private void initViewModel() {
         mViewModel = ViewModelProviders.of(this).get(HtmlRequestViewModel.class);
-        mViewModel.setContext(getContext());
         observeLoadState();
     }
 

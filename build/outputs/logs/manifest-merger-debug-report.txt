@@ -1,16 +1,16 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:2:1-29:12
-INJECTED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:2:1-29:12
-INJECTED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:2:1-29:12
-INJECTED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:2:1-29:12
+ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:2:1-31:12
 MERGED from [com.google.android.material:material:1.1.0] /home/max/.gradle/caches/transforms-2/files-2.1/88b8882e6a15c728169a63194a12dedc/material-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] /home/max/.gradle/caches/transforms-2/files-2.1/fb8f7031ef66b8147647717c2aecca12/appcompat-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/max/.gradle/caches/transforms-2/files-2.1/81a362b35962fa2496d450cbee5c4ecc/constraintlayout-1.1.3/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/max/.gradle/caches/transforms-2/files-2.1/54aa53a8adaadc2968ca0bcce2d1462a/viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/max/.gradle/caches/transforms-2/files-2.1/808d7e10cd964edb4db3a496265dbbef/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.cardview:cardview:1.0.0] /home/max/.gradle/caches/transforms-2/files-2.1/d619842a7eaf1130694ae1c01f978c20/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.github.bumptech.glide:glide:4.10.0] /home/max/.gradle/caches/transforms-2/files-2.1/ca278fa46dd4828c228ca588f4e7f7cc/glide-4.10.0/AndroidManifest.xml:2:1-12:12
+MERGED from [com.github.bumptech.glide:glide:4.11.0] /home/max/.gradle/caches/transforms-2/files-2.1/82932ddad6c31d60eecb122c7ce1f5bc/glide-4.11.0/AndroidManifest.xml:2:1-12:12
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] /home/max/.gradle/caches/transforms-2/files-2.1/7de43e7708f717f4cdd6a481b2acab38/lifecycle-extensions-2.0.0/AndroidManifest.xml:17:1-25:12
 MERGED from [androidx.fragment:fragment:1.1.0] /home/max/.gradle/caches/transforms-2/files-2.1/d888c399867a8f38619658b14b6b7815/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /home/max/.gradle/caches/transforms-2/files-2.1/03427883b80ab78f3e6a356eba4df863/appcompat-resources-1.1.0/AndroidManifest.xml:17:1-24:12
@@ -25,7 +25,8 @@ MERGED from [androidx.loader:loader:1.0.0] /home/max/.gradle/caches/transforms-2
 MERGED from [androidx.activity:activity:1.0.0] /home/max/.gradle/caches/transforms-2/files-2.1/d45e841e71572de25c8d80ebec98d932/activity-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.core:core:1.1.0] /home/max/.gradle/caches/transforms-2/files-2.1/331630a23dfa1f0594bcf54d5352aa36/core-1.1.0/AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/max/.gradle/caches/transforms-2/files-2.1/bf49d1e9988754dbe0dc022e3b661608/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.github.bumptech.glide:gifdecoder:4.10.0] /home/max/.gradle/caches/transforms-2/files-2.1/c74234a4fc5b4534d0505d98429db8ec/gifdecoder-4.10.0/AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /home/max/.gradle/caches/transforms-2/files-2.1/c74234a4fc5b4534d0505d98429db8ec/gifdecoder-4.10.0/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/max/.gradle/caches/transforms-2/files-2.1/373a185323e7fdfe979ee2534467a30f/exifinterface-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/max/.gradle/caches/transforms-2/files-2.1/ba1ca6d966f0903bfbc154284174b676/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/max/.gradle/caches/transforms-2/files-2.1/cf1beec41d3606c2f878b1c5dd26a539/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/max/.gradle/caches/transforms-2/files-2.1/5e0444443ffb82f923834973bbf621d3/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
@@ -36,47 +37,51 @@ MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /home/max/.gradle/cache
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /home/max/.gradle/caches/transforms-2/files-2.1/3576101df1addecb45ee4a121a0809b3/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.savedstate:savedstate:1.0.0] /home/max/.gradle/caches/transforms-2/files-2.1/6518c549eca7c8c139a4cbcfbf192b2e/savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] /home/max/.gradle/caches/transforms-2/files-2.1/5080ea4c3a94602e590d65de9668e7d9/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
-INJECTED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:2:1-29:12
-INJECTED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:2:1-29:12
-INJECTED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:2:1-29:12
+INJECTED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:2:1-31:12
 	package
 		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:4:5-35
 		INJECTED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml
 		INJECTED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml
-		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:2:1-29:12
+		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:2:1-31:12
 		INJECTED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml
 	xmlns:tools
 		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml
-		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:2:1-29:12
+		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:2:1-31:12
 		INJECTED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:6:5-79
+	android:name
+		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:6:22-76
 uses-permission#android.permission.INTERNET
-ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:6:5-66
+ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:7:5-66
 	android:name
-		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:6:22-64
+		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:7:22-64
 uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
-ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:7:5-80
+ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:8:5-80
 	android:name
-		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:7:22-78
+		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:8:22-78
 application
-ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:9:5-27:19
+ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:10:5-29:19
 MERGED from [com.google.android.material:material:1.1.0] /home/max/.gradle/caches/transforms-2/files-2.1/88b8882e6a15c728169a63194a12dedc/material-1.1.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.1.0] /home/max/.gradle/caches/transforms-2/files-2.1/88b8882e6a15c728169a63194a12dedc/material-1.1.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/max/.gradle/caches/transforms-2/files-2.1/81a362b35962fa2496d450cbee5c4ecc/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/max/.gradle/caches/transforms-2/files-2.1/81a362b35962fa2496d450cbee5c4ecc/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
-MERGED from [com.github.bumptech.glide:glide:4.10.0] /home/max/.gradle/caches/transforms-2/files-2.1/ca278fa46dd4828c228ca588f4e7f7cc/glide-4.10.0/AndroidManifest.xml:10:5-20
-MERGED from [com.github.bumptech.glide:glide:4.10.0] /home/max/.gradle/caches/transforms-2/files-2.1/ca278fa46dd4828c228ca588f4e7f7cc/glide-4.10.0/AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.11.0] /home/max/.gradle/caches/transforms-2/files-2.1/82932ddad6c31d60eecb122c7ce1f5bc/glide-4.11.0/AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.11.0] /home/max/.gradle/caches/transforms-2/files-2.1/82932ddad6c31d60eecb122c7ce1f5bc/glide-4.11.0/AndroidManifest.xml:10:5-20
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] /home/max/.gradle/caches/transforms-2/files-2.1/7de43e7708f717f4cdd6a481b2acab38/lifecycle-extensions-2.0.0/AndroidManifest.xml:22:5-23:19
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] /home/max/.gradle/caches/transforms-2/files-2.1/7de43e7708f717f4cdd6a481b2acab38/lifecycle-extensions-2.0.0/AndroidManifest.xml:22:5-23:19
 MERGED from [androidx.core:core:1.1.0] /home/max/.gradle/caches/transforms-2/files-2.1/331630a23dfa1f0594bcf54d5352aa36/core-1.1.0/AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.1.0] /home/max/.gradle/caches/transforms-2/files-2.1/331630a23dfa1f0594bcf54d5352aa36/core-1.1.0/AndroidManifest.xml:24:5-89
-MERGED from [com.github.bumptech.glide:gifdecoder:4.10.0] /home/max/.gradle/caches/transforms-2/files-2.1/c74234a4fc5b4534d0505d98429db8ec/gifdecoder-4.10.0/AndroidManifest.xml:9:5-20
-MERGED from [com.github.bumptech.glide:gifdecoder:4.10.0] /home/max/.gradle/caches/transforms-2/files-2.1/c74234a4fc5b4534d0505d98429db8ec/gifdecoder-4.10.0/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /home/max/.gradle/caches/transforms-2/files-2.1/c74234a4fc5b4534d0505d98429db8ec/gifdecoder-4.10.0/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /home/max/.gradle/caches/transforms-2/files-2.1/c74234a4fc5b4534d0505d98429db8ec/gifdecoder-4.10.0/AndroidManifest.xml:9:5-20
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/max/.gradle/caches/transforms-2/files-2.1/f3d3c9ef953af10d388177573d1cb616/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/max/.gradle/caches/transforms-2/files-2.1/f3d3c9ef953af10d388177573d1cb616/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.lifecycle:lifecycle-process:2.0.0] /home/max/.gradle/caches/transforms-2/files-2.1/12fd5a076df57dd1ea8b164c6ea7dbc6/lifecycle-process-2.0.0/AndroidManifest.xml:22:5-28:19
@@ -84,37 +89,39 @@ MERGED from [androidx.lifecycle:lifecycle-process:2.0.0] /home/max/.gradle/cache
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.1.0] /home/max/.gradle/caches/transforms-2/files-2.1/331630a23dfa1f0594bcf54d5352aa36/core-1.1.0/AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:14:9-35
+		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:16:9-35
 	android:label
-		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:12:9-41
+		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:14:9-41
 	tools:ignore
-		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:16:9-48
+		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:18:9-48
 	android:roundIcon
-		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:13:9-54
+		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:15:9-54
 	android:icon
-		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:11:9-43
+		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:13:9-43
 	android:allowBackup
-		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:10:9-35
+		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:12:9-35
 	android:theme
-		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:15:9-40
+		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:17:9-40
+	android:name
+		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:11:9-56
 activity#com.example.lazyuser.activities.MainActivity
-ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:17:9-26:20
+ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:19:9-28:20
 	android:label
-		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:19:13-45
+		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:21:13-45
 	android:theme
-		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:20:13-56
+		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:22:13-56
 	android:name
-		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:18:13-52
+		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:20:13-52
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:21:13-25:29
+ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:23:13-27:29
 action#android.intent.action.MAIN
-ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:22:17-69
+ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:24:17-69
 	android:name
-		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:22:25-66
+		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:24:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:24:17-77
+ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:26:17-77
 	android:name
-		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:24:27-74
+		ADDED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:26:27-74
 uses-sdk
 INJECTED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml
@@ -131,8 +138,8 @@ MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/max/.gradle/caches/
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/max/.gradle/caches/transforms-2/files-2.1/808d7e10cd964edb4db3a496265dbbef/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.cardview:cardview:1.0.0] /home/max/.gradle/caches/transforms-2/files-2.1/d619842a7eaf1130694ae1c01f978c20/cardview-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] /home/max/.gradle/caches/transforms-2/files-2.1/d619842a7eaf1130694ae1c01f978c20/cardview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.github.bumptech.glide:glide:4.10.0] /home/max/.gradle/caches/transforms-2/files-2.1/ca278fa46dd4828c228ca588f4e7f7cc/glide-4.10.0/AndroidManifest.xml:6:5-8:41
-MERGED from [com.github.bumptech.glide:glide:4.10.0] /home/max/.gradle/caches/transforms-2/files-2.1/ca278fa46dd4828c228ca588f4e7f7cc/glide-4.10.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.11.0] /home/max/.gradle/caches/transforms-2/files-2.1/82932ddad6c31d60eecb122c7ce1f5bc/glide-4.11.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.11.0] /home/max/.gradle/caches/transforms-2/files-2.1/82932ddad6c31d60eecb122c7ce1f5bc/glide-4.11.0/AndroidManifest.xml:6:5-8:41
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] /home/max/.gradle/caches/transforms-2/files-2.1/7de43e7708f717f4cdd6a481b2acab38/lifecycle-extensions-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] /home/max/.gradle/caches/transforms-2/files-2.1/7de43e7708f717f4cdd6a481b2acab38/lifecycle-extensions-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.1.0] /home/max/.gradle/caches/transforms-2/files-2.1/d888c399867a8f38619658b14b6b7815/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
@@ -161,8 +168,10 @@ MERGED from [androidx.core:core:1.1.0] /home/max/.gradle/caches/transforms-2/fil
 MERGED from [androidx.core:core:1.1.0] /home/max/.gradle/caches/transforms-2/files-2.1/331630a23dfa1f0594bcf54d5352aa36/core-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/max/.gradle/caches/transforms-2/files-2.1/bf49d1e9988754dbe0dc022e3b661608/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/max/.gradle/caches/transforms-2/files-2.1/bf49d1e9988754dbe0dc022e3b661608/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.github.bumptech.glide:gifdecoder:4.10.0] /home/max/.gradle/caches/transforms-2/files-2.1/c74234a4fc5b4534d0505d98429db8ec/gifdecoder-4.10.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.bumptech.glide:gifdecoder:4.10.0] /home/max/.gradle/caches/transforms-2/files-2.1/c74234a4fc5b4534d0505d98429db8ec/gifdecoder-4.10.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /home/max/.gradle/caches/transforms-2/files-2.1/c74234a4fc5b4534d0505d98429db8ec/gifdecoder-4.10.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /home/max/.gradle/caches/transforms-2/files-2.1/c74234a4fc5b4534d0505d98429db8ec/gifdecoder-4.10.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/max/.gradle/caches/transforms-2/files-2.1/373a185323e7fdfe979ee2534467a30f/exifinterface-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/max/.gradle/caches/transforms-2/files-2.1/373a185323e7fdfe979ee2534467a30f/exifinterface-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/max/.gradle/caches/transforms-2/files-2.1/ba1ca6d966f0903bfbc154284174b676/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/max/.gradle/caches/transforms-2/files-2.1/ba1ca6d966f0903bfbc154284174b676/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/max/.gradle/caches/transforms-2/files-2.1/cf1beec41d3606c2f878b1c5dd26a539/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44

@@ -1,10 +1,10 @@
 package com.example.lazyuser.adapters;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.lazyuser.R;
-import com.example.lazyuser.config.AppConfig;
 import com.example.lazyuser.models.RelatedImageItem;
 
 import java.util.ArrayList;
@@ -23,16 +22,11 @@ public class RelatedImageListAdapter extends RecyclerView.Adapter<RecyclerView.V
     private List<RelatedImageItem> mList;
     private Context mContext;
 
-    public RelatedImageListAdapter(List<RelatedImageItem> list, Context context) {
+    RelatedImageListAdapter(List<RelatedImageItem> list, Context context) {
         if (list != null) {
             mList = new ArrayList<>(list);
         }
         mContext = context;
-    }
-
-    public void updateList(List<RelatedImageItem> list) {
-        mList = new ArrayList<>(list);
-        this.notifyDataSetChanged();
     }
 
     @NonNull
@@ -50,11 +44,10 @@ public class RelatedImageListAdapter extends RecyclerView.Adapter<RecyclerView.V
         ImageViewHolder imageHolder = (ImageViewHolder) holder;
 
         String source = item.getSource();
-        //Log.d(AppConfig.APPLICATION_TAG, source);
         if (source != null) {
             Glide.with(mContext)
                     .load(source)
-                    .centerCrop()
+                    .override(WindowManager.LayoutParams.MATCH_PARENT, 256)
                     .into(imageHolder.image);
         }
     }

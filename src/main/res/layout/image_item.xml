@@ -44,10 +44,11 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/related_image_list"
                 android:layout_width="match_parent"
-                android:layout_height="190dp"
+                android:layout_height="256dp"
                 android:layout_below="@id/size"
                 android:layout_marginBottom="56dp"
-                android:clipToPadding="false" />
+                android:clipToPadding="false"
+                android:visibility="gone"/>
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>

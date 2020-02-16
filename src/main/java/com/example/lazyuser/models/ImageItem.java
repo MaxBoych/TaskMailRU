@@ -10,7 +10,8 @@ public class ImageItem {
     private String size;
     private List<RelatedImageItem> relatedImageList;
 
-    public ImageItem() {}
+    public ImageItem() {
+    }
 
     public ImageItem(String source, String url, String size) {
         this.source = source;
