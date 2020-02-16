@@ -1,4 +1,4 @@
-#Sun Feb 16 23:48:30 MSK 2020
+#Mon Feb 17 02:06:36 MSK 2020
 base.0=/home/max/AndroidStudioProjects/app/build/intermediates/dex/debug/mergeExtDexDebug/out/classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex

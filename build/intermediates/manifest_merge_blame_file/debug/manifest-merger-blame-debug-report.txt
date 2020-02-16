@@ -37,39 +37,38 @@
 22-->/home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:15:9-54
 23        android:supportsRtl="true"
 23-->/home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:16:9-35
-24        android:testOnly="true"
-25        android:theme="@style/AppTheme" >
-25-->/home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:17:9-40
-26        <activity
-26-->/home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:19:9-28:20
-27            android:name="com.example.lazyuser.activities.MainActivity"
-27-->/home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:20:13-52
-28            android:label="@string/app_name"
-28-->/home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:21:13-45
-29            android:theme="@style/AppTheme.NoActionBar" >
-29-->/home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:22:13-56
-30            <intent-filter>
-30-->/home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:23:13-27:29
-31                <action android:name="android.intent.action.MAIN" />
-31-->/home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:24:17-69
-31-->/home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:24:25-66
-32
-33                <category android:name="android.intent.category.LAUNCHER" />
-33-->/home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:26:17-77
-33-->/home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:26:27-74
-34            </intent-filter>
-35        </activity>
-36
-37        <provider
-37-->[androidx.lifecycle:lifecycle-process:2.0.0] /home/max/.gradle/caches/transforms-2/files-2.1/12fd5a076df57dd1ea8b164c6ea7dbc6/lifecycle-process-2.0.0/AndroidManifest.xml:23:9-27:43
-38            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-38-->[androidx.lifecycle:lifecycle-process:2.0.0] /home/max/.gradle/caches/transforms-2/files-2.1/12fd5a076df57dd1ea8b164c6ea7dbc6/lifecycle-process-2.0.0/AndroidManifest.xml:24:13-79
-39            android:authorities="com.example.lazyuser.lifecycle-process"
-39-->[androidx.lifecycle:lifecycle-process:2.0.0] /home/max/.gradle/caches/transforms-2/files-2.1/12fd5a076df57dd1ea8b164c6ea7dbc6/lifecycle-process-2.0.0/AndroidManifest.xml:25:13-69
-40            android:exported="false"
-40-->[androidx.lifecycle:lifecycle-process:2.0.0] /home/max/.gradle/caches/transforms-2/files-2.1/12fd5a076df57dd1ea8b164c6ea7dbc6/lifecycle-process-2.0.0/AndroidManifest.xml:26:13-37
-41            android:multiprocess="true" />
-41-->[androidx.lifecycle:lifecycle-process:2.0.0] /home/max/.gradle/caches/transforms-2/files-2.1/12fd5a076df57dd1ea8b164c6ea7dbc6/lifecycle-process-2.0.0/AndroidManifest.xml:27:13-40
-42    </application>
-43
-44</manifest>
+24        android:theme="@style/AppTheme" >
+24-->/home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:17:9-40
+25        <activity
+25-->/home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:19:9-28:20
+26            android:name="com.example.lazyuser.activities.MainActivity"
+26-->/home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:20:13-52
+27            android:label="@string/app_name"
+27-->/home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:21:13-45
+28            android:theme="@style/AppTheme.NoActionBar" >
+28-->/home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:22:13-56
+29            <intent-filter>
+29-->/home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:23:13-27:29
+30                <action android:name="android.intent.action.MAIN" />
+30-->/home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:24:17-69
+30-->/home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:24:25-66
+31
+32                <category android:name="android.intent.category.LAUNCHER" />
+32-->/home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:26:17-77
+32-->/home/max/AndroidStudioProjects/app/src/main/AndroidManifest.xml:26:27-74
+33            </intent-filter>
+34        </activity>
+35
+36        <provider
+36-->[androidx.lifecycle:lifecycle-process:2.0.0] /home/max/.gradle/caches/transforms-2/files-2.1/12fd5a076df57dd1ea8b164c6ea7dbc6/lifecycle-process-2.0.0/AndroidManifest.xml:23:9-27:43
+37            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+37-->[androidx.lifecycle:lifecycle-process:2.0.0] /home/max/.gradle/caches/transforms-2/files-2.1/12fd5a076df57dd1ea8b164c6ea7dbc6/lifecycle-process-2.0.0/AndroidManifest.xml:24:13-79
+38            android:authorities="com.example.lazyuser.lifecycle-process"
+38-->[androidx.lifecycle:lifecycle-process:2.0.0] /home/max/.gradle/caches/transforms-2/files-2.1/12fd5a076df57dd1ea8b164c6ea7dbc6/lifecycle-process-2.0.0/AndroidManifest.xml:25:13-69
+39            android:exported="false"
+39-->[androidx.lifecycle:lifecycle-process:2.0.0] /home/max/.gradle/caches/transforms-2/files-2.1/12fd5a076df57dd1ea8b164c6ea7dbc6/lifecycle-process-2.0.0/AndroidManifest.xml:26:13-37
+40            android:multiprocess="true" />
+40-->[androidx.lifecycle:lifecycle-process:2.0.0] /home/max/.gradle/caches/transforms-2/files-2.1/12fd5a076df57dd1ea8b164c6ea7dbc6/lifecycle-process-2.0.0/AndroidManifest.xml:27:13-40
+41    </application>
+42
+43</manifest>

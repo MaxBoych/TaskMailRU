@@ -1,5 +1,7 @@
 package com.example.lazyuser.models;
 
+import android.media.Image;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +14,12 @@ public class ImageItem {
 
     public ImageItem() {
     }
+
+    /*public ImageItem(ImageItem item) {
+        source = item.getSource();
+        url = item.getUrl();
+        size = item.getSize();
+    }*/
 
     public ImageItem(String source, String url, String size) {
         this.source = source;

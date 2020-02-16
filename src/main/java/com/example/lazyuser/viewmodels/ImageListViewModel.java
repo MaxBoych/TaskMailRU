@@ -1,5 +1,7 @@
 package com.example.lazyuser.viewmodels;
 
+import android.util.Log;
+
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
@@ -73,14 +75,16 @@ public class ImageListViewModel extends ViewModel {
 
     private void updateRelatedList(List<RelatedImageItem> list) {
         mRelatedImageList = new ArrayList<>(list);
+        /*Log.d(AppConfig.APPLICATION_TAG, "AFTER UPDATE");
+        for (RelatedImageItem item : mRelatedImageList) {
+            Log.d(AppConfig.APPLICATION_TAG, item.getSource());
+        }*/
         mLoadState.setValue(AppConfig.LoadStageState.SUCCESS);
     }
 
-    public ImageItem updateRelated(int position) {
-        ImageItem item = mImageList.get(position);
-        item.setRelatedImageList(mRelatedImageList);
+    public void updateRelated(int position) {
+        mImageList.get(position).setRelatedImageList(mRelatedImageList);
         mRelatedImageList = null;
-        return item;
     }
 
     private void updateError(String errorMessage) {

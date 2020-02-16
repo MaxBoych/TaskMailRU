@@ -45,14 +45,7 @@ public class ImageListRepository {
             mAmount = images.size();
             Log.d(AppConfig.APPLICATION_TAG, mAmount + "");
             for (Element image : images) {
-                String source = image.absUrl(AppConfig.RELATED_IMAGE_SOURCE_ATTR_NAME);
-                if (source.isEmpty()) {
-                    source = image.absUrl(AppConfig.RELATED_IMAGE_SOURCE_ATTR_NAME_RESERVE);
-                    if (source.isEmpty()) {
-                        Log.d(AppConfig.APPLICATION_TAG, "source is empty!");
-                    }
-                }
-                Log.d(AppConfig.APPLICATION_TAG, "HERE");
+                String source = getCorrectSource(image);
                 new AsyncRequestImage(this::afterReceivingImage).execute(source);
             }
         } else {
@@ -70,6 +63,25 @@ public class ImageListRepository {
             mList.add(new RelatedImageItem(result.getThird()));
         }
         checkReadiness();
+    }
+
+    private String getCorrectSource(Element image) {
+        String source = image.attr(AppConfig.RELATED_IMAGE_SOURCE_ATTR_NAME);
+        if (source.isEmpty()) {
+            source = image.attr(AppConfig.RELATED_IMAGE_SOURCE_ATTR_NAME_RESERVE);
+            if (source.isEmpty()) {
+                Log.d(AppConfig.APPLICATION_TAG, "source is empty!");
+            } else if (source.charAt(0) == '/') {
+                source = "https:" + source;
+            }
+            Log.d(AppConfig.APPLICATION_TAG, source);
+        } else if (source.charAt(0) == '/') {
+            source = "https:" + source;
+        }
+        Log.d(AppConfig.APPLICATION_TAG, source);
+        //Log.d(AppConfig.APPLICATION_TAG, "HERE");
+
+        return source;
     }
 
     private void checkReadiness() {

@@ -1,6 +1,7 @@
 package com.example.lazyuser.activities;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -29,6 +30,11 @@ public class MainActivity extends AppCompatActivity implements MainStateChangeLi
                 .observe(this, networkState -> {
                     if (networkState == AppConfig.NetworkState.LOST) {
                         onNetworkLostScreen();
+                    } else if (networkState == AppConfig.NetworkState.AVAILABLE) {
+                        Toast.makeText(getApplicationContext(),
+                                AppConfig.NETWORK_AVAILABLE_MESSAGE,
+                                Toast.LENGTH_LONG)
+                                .show();
                     }
                 });
     }

@@ -56,7 +56,7 @@ public class ImageListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        ImageItem item = mList.get(position);
+        ImageItem item = mList.get(holder.getAdapterPosition());
         ImageViewHolder itemHolder = (ImageViewHolder) holder;
         itemHolder.url.setText(item.getUrl());
         itemHolder.size.setText(item.getSize());

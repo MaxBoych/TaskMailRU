@@ -59,7 +59,7 @@ public class AsyncRequestImage extends AsyncTask<String, Void, Triple<Integer, I
                     .openConnection();
             connection.setRequestProperty("User-Agent", "Mozilla 5.0 (Windows; U; "
                     + "Windows NT 5.1; en-US; rv:1.8.0.11) ");
-            //connection.setDoInput(true);
+            connection.setDoInput(true);
             connection.connect();
             InputStream input = connection.getInputStream();
             return BitmapFactory.decodeStream(input);

@@ -4,7 +4,6 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
@@ -40,14 +39,15 @@ public class RelatedImageListAdapter extends RecyclerView.Adapter<RecyclerView.V
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        RelatedImageItem item = mList.get(position);
+        RelatedImageItem item = mList.get(holder.getAdapterPosition());
         ImageViewHolder imageHolder = (ImageViewHolder) holder;
 
         String source = item.getSource();
+        //Log.d(AppConfig.APPLICATION_TAG, "ADAPTER:  " + source);
         if (source != null) {
             Glide.with(mContext)
                     .load(source)
-                    .override(WindowManager.LayoutParams.MATCH_PARENT, 256)
+                    //.override(WindowManager.LayoutParams.MATCH_PARENT, 256)
                     .into(imageHolder.image);
         }
     }

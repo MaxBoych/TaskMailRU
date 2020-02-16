@@ -43,6 +43,8 @@ public class AppConfig {
     public final static String RELATED_IMAGE_SOURCE_ATTR_NAME_RESERVE = "data-src";
     public final static String RELATED_IMAGE_SOURCE_TAG_NAME = "img";
 
+    public final static String NETWORK_AVAILABLE_MESSAGE = "You are online :)";
+
     public final static int IMAGE_MINIMAL_WIDTH_SIZE = 128;
     public final static int IMAGE_MINIMAL_HEIGHT_SIZE = 128;
 

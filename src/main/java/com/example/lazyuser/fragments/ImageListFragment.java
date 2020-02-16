@@ -102,31 +102,26 @@ public class ImageListFragment extends Fragment implements View.OnClickListener 
                 case SUCCESS:
                     List<RelatedImageItem> related = mViewModel.getRelatedImageList();
                     if (related != null) {
-                        ImageItem item = mViewModel.updateRelated(mClickedPosition);
-                        mAdapter.notifyItemChanged(mClickedPosition, item);
-                        //allowTouch();
+                        mViewModel.updateRelated(mClickedPosition);
+                        mAdapter.notifyItemChanged(mClickedPosition);
                     } else {
                         updateAdapter();
                     }
                     setLoadProgressBarVisibility(View.GONE);
-                    //mNewSearch.setEnabled(true);
                     allowTouch();
                     break;
                 case NONE:
                     setLoadProgressBarVisibility(View.GONE);
                     allowTouch();
-                    //mNewSearch.setEnabled(true);
                     break;
                 case FAIL:
                     setLoadProgressBarVisibility(View.GONE);
                     showError();
-                    //mNewSearch.setEnabled(true);
                     allowTouch();
                     break;
                 case PROGRESS:
                     setLoadProgressBarVisibility(View.VISIBLE);
                     prohibitTouch();
-                    //mNewSearch.setEnabled(false);
                     break;
             }
         });
